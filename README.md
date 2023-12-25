@@ -1,7 +1,3 @@
-Absolutely, let's incorporate the name "Veddy Ai" into the description to promote it effectively. Here's an enhanced version:
-
----
-
 **GitHub Project Description:**
 
 🚀 Welcome to **Veddy Ai Coding Assistant** - Your Intelligent Coding Companion 🚀
