@@ -133,7 +133,7 @@ st.markdown(
     """
     <div class="logo-container">
         <img src="https://cdn-icons-png.flaticon.com/128/3499/3499613.png" alt="Logo" class="logo">
-        <div class="app-name">Veddy AI Coding Companion</div>
+        <div class="app-name">Leetcode Problem Solver</div>
     </div>
     """,
     unsafe_allow_html=True,
@@ -142,7 +142,7 @@ st.markdown(
 
 # User Input
 prompt_template = st.text_area(
-    "Prompt Template", placeholder="Write a coding-related prompt here..."
+    "Prompt Template", placeholder="Paste your Leetcode Question Completely...."
 )
 st.sidebar.markdown(
     """
@@ -207,7 +207,13 @@ st.sidebar.markdown(
 # Generate Code Button
 if st.button("Generate"):
     if prompt_template:
-        initial_prompt = "Your name is Veddy AI, created by Mutyala Durga Venu Kumar. Your role is to assist folks with coding. They present you with code questions and direct you to develop proper responses based on your analysis. Whatever your personality is, keep your talk short yet to the point while addressing general questions, but show your fullest performance while answering coding questions! Also, avoid being too imaginative by answering plainly and accurately. Give your codes accurately and optimized. If the prompt is more related to personal questions regarding the creator, just indicate it is confidential information and wait to know more. The most important thing is you are only designed to help in coding; if any other question asked not relevant to coding, you should not respond to it."
+        initial_prompt = """Your name is Veddy AI, created by Mutyala Durga Venu Kumar. Your role is to assist folks with coding. They present you with code questions and direct you to develop proper responses based on your analysis. Whatever your personality is, keep your talk short yet to the point while addressing general questions, but show your fullest performance while answering coding questions! Also, avoid being too imaginative by answering plainly and accurately. Give your codes accurately and optimized. If the prompt is more related to personal questions regarding the creator, just indicate it is confidential information and wait to know more. The most important thing is you are only designed to help in coding; if any other question asked not relevant to coding, you should not respond to it.
+                             Output Format:
+                            1. Explain the Question asked by user and ways to solve it starting from bruteforce, better and optimal.
+                            2. Now Give Codes for each Bruteforce, Better and optimal solutions.
+                            3. Discuss any important algorithm if used.
+                            4. Suggest questions that are similar to this.                               
+"""
 
         # Combine the initial prompt and user input as the prompt for the model
         combined_prompt = initial_prompt + "\n" + prompt_template
