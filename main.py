@@ -25,7 +25,7 @@ model = genai.GenerativeModel(
 
 # UI Improvements
 st.set_page_config(
-    page_title="Veddy AI Coding Companion",
+    page_title="Leetcode Problem Solver",
     page_icon="https://cdn-icons-png.flaticon.com/128/3499/3499613.png",
     layout="wide",
 )
@@ -148,7 +148,7 @@ st.sidebar.markdown(
     """
     <div class="logo-container">
         <img src="https://cdn-icons-png.flaticon.com/128/3499/3499613.png" alt="Logo" class="logo">
-        <div class="app-name">Veddy AI</div>
+        <div class="app-name">Leetcode Problem Solver</div>
     </div>
     """,
     unsafe_allow_html=True,
